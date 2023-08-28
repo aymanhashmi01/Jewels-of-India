@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #555;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  input[type="text"],
+  textarea {
+    width: 96.5%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #777;
+  }
+  textarea {
+    resize: vertical;
+  }
+  input[type="submit"] {
+    background-color: #7c4dff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  input[type="submit"]:hover {
+    background-color: #5d39b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Share Your Feedback</h1>
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="feedback">Tell Us Your Thoughts:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+    <input type="button" value="Submit Feedback" onclick="redirectToThankYou()">
+  </form>
+</div>
+
+<script>
+  function redirectToThankYou() {
+    window.location.href = "thankyou.html"; // Change this to the actual URL of your "Thank You" page
+  }
+</script>
+
+</body>
+</html>
